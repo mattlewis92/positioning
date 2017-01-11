@@ -14,7 +14,7 @@ module.exports = {
       enforce: 'pre'
     }, {
       test: /\.ts$/,
-      loader: 'awesome-typescript-loader?module=es2015',
+      loader: 'awesome-typescript-loader?module=es2015&declaration=false',
       exclude: /node_modules/
     }]
   },

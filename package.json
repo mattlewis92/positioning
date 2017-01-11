@@ -3,7 +3,8 @@
   "version": "1.0.4",
   "description": "The ng-bootstrap Positioning class as a standalone module",
   "main": "dist/umd/positioning.js",
-  "typings": "dist/umd/src/positioning.d.ts",
+  "typings": "dist/positioning.d.ts",
+  "module": "dist/positioning.js",
   "files": [
     "dist"
   ],
@@ -11,7 +12,9 @@
     "test": "karma start --single-run",
     "test:watch": "karma start --auto-watch",
     "start": "npm run test:watch",
-    "build": "webpack",
+    "build:umd": "webpack",
+    "build:esm": "tsc --module es2015",
+    "build": "npm run build:esm && npm run build:umd",
     "clean": "rm -rf dist",
     "preversion": "npm test",
     "postversion": "npm run build && git push && npm publish && npm run clean"
