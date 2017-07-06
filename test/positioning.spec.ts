@@ -1,3 +1,4 @@
+import {expect} from 'chai';
 import {Positioning} from '../src/positioning';
 
 describe('Positioning', () => {
@@ -31,12 +32,12 @@ describe('Positioning', () => {
   it('should calculate the element offset', () => {
     let position = positioning.offset(element);
 
-    expect(position.height).toBe(200);
-    expect(position.width).toBe(300);
-    expect(position.top).toBe(100);
-    expect(position.bottom).toBe(300);
-    expect(position.left).toBe(150);
-    expect(position.right).toBe(450);
+    expect(position.height).to.equal(200);
+    expect(position.width).to.equal(300);
+    expect(position.top).to.equal(100);
+    expect(position.bottom).to.equal(300);
+    expect(position.left).to.equal(150);
+    expect(position.right).to.equal(450);
   });
 
   it('should calculate the element offset when scrolled', () => {
@@ -45,10 +46,10 @@ describe('Positioning', () => {
 
     let position = positioning.offset(element);
 
-    expect(position.top).toBe(100);
-    expect(position.bottom).toBe(300);
-    expect(position.left).toBe(150);
-    expect(position.right).toBe(450);
+    expect(position.top).to.equal(100);
+    expect(position.bottom).to.equal(300);
+    expect(position.left).to.equal(150);
+    expect(position.right).to.equal(450);
 
     document.documentElement.scrollTop = 0;
     document.documentElement.scrollLeft = 0;
@@ -57,12 +58,12 @@ describe('Positioning', () => {
   it('should calculate the element position', () => {
     let position = positioning.position(element);
 
-    expect(position.height).toBe(200);
-    expect(position.width).toBe(300);
-    expect(position.top).toBe(100);
-    expect(position.bottom).toBe(300);
-    expect(position.left).toBe(150);
-    expect(position.right).toBe(450);
+    expect(position.height).to.equal(200);
+    expect(position.width).to.equal(300);
+    expect(position.top).to.equal(100);
+    expect(position.bottom).to.equal(300);
+    expect(position.left).to.equal(150);
+    expect(position.right).to.equal(450);
   });
 
   it('should calculate the element position when scrolled', () => {
@@ -71,10 +72,10 @@ describe('Positioning', () => {
 
     let position = positioning.position(element);
 
-    expect(position.top).toBe(100);
-    expect(position.bottom).toBe(300);
-    expect(position.left).toBe(150);
-    expect(position.right).toBe(450);
+    expect(position.top).to.equal(100);
+    expect(position.bottom).to.equal(300);
+    expect(position.left).to.equal(150);
+    expect(position.right).to.equal(450);
 
     document.documentElement.scrollTop = 0;
     document.documentElement.scrollLeft = 0;
@@ -88,10 +89,10 @@ describe('Positioning', () => {
 
     let position = positioning.position(childElement);
 
-    expect(position.top).toBe(50);
-    expect(position.bottom).toBe(150);
-    expect(position.left).toBe(75);
-    expect(position.right).toBe(225);
+    expect(position.top).to.equal(50);
+    expect(position.bottom).to.equal(150);
+    expect(position.left).to.equal(75);
+    expect(position.right).to.equal(225);
 
     element.style.position = '';
     element.removeChild(childElement);
@@ -100,85 +101,85 @@ describe('Positioning', () => {
   it('should position the element top-left', () => {
     let position = positioning.positionElements(element, targetElement, 'top-left');
 
-    expect(position.top).toBe(50);
-    expect(position.left).toBe(150);
+    expect(position.top).to.equal(50);
+    expect(position.left).to.equal(150);
   });
 
   it('should position the element top-center', () => {
     let position = positioning.positionElements(element, targetElement, 'top');
 
-    expect(position.top).toBe(50);
-    expect(position.left).toBe(250);
+    expect(position.top).to.equal(50);
+    expect(position.left).to.equal(250);
   });
 
   it('should position the element top-right', () => {
     let position = positioning.positionElements(element, targetElement, 'top-right');
 
-    expect(position.top).toBe(50);
-    expect(position.left).toBe(350);
+    expect(position.top).to.equal(50);
+    expect(position.left).to.equal(350);
   });
 
   it('should position the element bottom-left', () => {
     let position = positioning.positionElements(element, targetElement, 'bottom-left');
 
-    expect(position.top).toBe(300);
-    expect(position.left).toBe(150);
+    expect(position.top).to.equal(300);
+    expect(position.left).to.equal(150);
   });
 
   it('should position the element bottom-center', () => {
     let position = positioning.positionElements(element, targetElement, 'bottom');
 
-    expect(position.top).toBe(300);
-    expect(position.left).toBe(250);
+    expect(position.top).to.equal(300);
+    expect(position.left).to.equal(250);
   });
 
   it('should position the element bottom-right', () => {
     let position = positioning.positionElements(element, targetElement, 'bottom-right');
 
-    expect(position.top).toBe(300);
-    expect(position.left).toBe(350);
+    expect(position.top).to.equal(300);
+    expect(position.left).to.equal(350);
   });
 
   it('should position the element left-top', () => {
     let position = positioning.positionElements(element, targetElement, 'left-top');
 
-    expect(position.top).toBe(100);
-    expect(position.left).toBe(50);
+    expect(position.top).to.equal(100);
+    expect(position.left).to.equal(50);
   });
 
   it('should position the element left-center', () => {
     let position = positioning.positionElements(element, targetElement, 'left');
 
-    expect(position.top).toBe(175);
-    expect(position.left).toBe(50);
+    expect(position.top).to.equal(175);
+    expect(position.left).to.equal(50);
   });
 
   it('should position the element left-bottom', () => {
     let position = positioning.positionElements(element, targetElement, 'left-bottom');
 
-    expect(position.top).toBe(250);
-    expect(position.left).toBe(50);
+    expect(position.top).to.equal(250);
+    expect(position.left).to.equal(50);
   });
 
   it('should position the element right-top', () => {
     let position = positioning.positionElements(element, targetElement, 'right-top');
 
-    expect(position.top).toBe(100);
-    expect(position.left).toBe(450);
+    expect(position.top).to.equal(100);
+    expect(position.left).to.equal(450);
   });
 
   it('should position the element right-center', () => {
     let position = positioning.positionElements(element, targetElement, 'right');
 
-    expect(position.top).toBe(175);
-    expect(position.left).toBe(450);
+    expect(position.top).to.equal(175);
+    expect(position.left).to.equal(450);
   });
 
   it('should position the element right-bottom', () => {
     let position = positioning.positionElements(element, targetElement, 'right-bottom');
 
-    expect(position.top).toBe(250);
-    expect(position.left).toBe(450);
+    expect(position.top).to.equal(250);
+    expect(position.left).to.equal(450);
   });
 
   it('cleanUp', () => {
