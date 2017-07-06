@@ -34,7 +34,6 @@
   },
   "homepage": "https://github.com/mattlewis92/positioning#readme",
   "devDependencies": {
-    "@ng-bootstrap/ng-bootstrap": "~1.0.0-alpha.16",
     "@types/chai": "^3.4.34",
     "@types/jasmine": "^2.5.40",
     "@types/node": "^6.0.54",
