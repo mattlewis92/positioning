@@ -9,15 +9,15 @@
     "dist"
   ],
   "scripts": {
-    "test": "karma start --single-run",
+    "test": "karma start --single-run && npm run build:dist && npm run build:clean",
     "test:watch": "karma start --auto-watch",
     "start": "npm run test:watch",
     "build:umd": "webpack",
     "build:esm": "tsc --module es2015",
-    "build": "npm run build:esm && npm run build:umd",
-    "clean": "rm -rf dist",
+    "build:dist": "npm run build:esm && npm run build:umd",
+    "build:clean": "rm -rf dist",
     "preversion": "npm test",
-    "postversion": "npm run build && git push && npm publish && npm run clean",
+    "postversion": "npm run build:dist && git push && npm publish && npm run build:clean",
     "codecov": "cat coverage/lcov.info | codecov"
   },
   "repository": {
