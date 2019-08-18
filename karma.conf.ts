@@ -23,6 +23,7 @@ export default config => {
     },
 
     webpack: {
+      mode: 'development',
       devtool: 'inline-source-map',
       resolve: {
         extensions: ['.ts', '.js']

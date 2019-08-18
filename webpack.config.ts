@@ -1,4 +1,5 @@
 export default {
+  mode: 'none',
   entry: __dirname + '/src/positioning.ts',
   output: {
     path: __dirname + '/dist/umd',
