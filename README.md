@@ -12,10 +12,9 @@
 
 ## Usage
 ```
-import { Positioning } from 'positioning';
+import { positionElements } from 'positioning';
 
-const positioning = new Positioning();
-const position = positioning.positionElements(host, target, placment, appendToBody);
+const position = positionElements(host, target, placement, appendToBody);
 ```
 
 ## License
