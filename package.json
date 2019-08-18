@@ -3,8 +3,8 @@
   "version": "1.5.0",
   "description": "The ng-bootstrap Positioning class as a standalone module",
   "main": "dist/umd/positioning.js",
-  "typings": "dist/positioning.d.ts",
-  "module": "dist/positioning.js",
+  "typings": "dist/entry.d.ts",
+  "module": "dist/entry.js",
   "files": [
     "dist"
   ],
