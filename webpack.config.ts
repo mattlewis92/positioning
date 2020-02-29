@@ -5,7 +5,8 @@ export default {
     path: __dirname + '/dist/umd',
     filename: 'positioning.js',
     libraryTarget: 'umd',
-    library: 'positioning'
+    library: 'positioning',
+    globalObject: 'typeof self !== \'undefined\' ? self : this'
   },
   module: {
     rules: [{
