@@ -5,6 +5,14 @@
   "main": "dist/umd/positioning.js",
   "typings": "dist/entry.d.ts",
   "module": "dist/entry.js",
+  "exports": {
+    ".": {
+      "main": "./dist/entry.js",
+      "types": "./dist/entry.d.ts",
+      "require": "./dist/umd/positioning.js",
+      "default": "./dist/entry.js"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -38,7 +46,6 @@
     "@types/chai": "^4.2.0",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.2",
-    "@types/webpack": "^4.32.2",
     "chai": "^4.2.0",
     "codecov": "^3.5.0",
     "istanbul-instrumenter-loader": "^3.0.1",
@@ -47,14 +54,14 @@
     "karma-coverage-istanbul-reporter": "^2.1.0",
     "karma-mocha": "^1.3.0",
     "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "^4.0.2",
+    "karma-webpack": "^5.0.1",
     "mocha": "^6.2.0",
-    "ts-loader": "^6.0.4",
+    "ts-loader": "^9.5.4",
     "ts-node": "^8.3.0",
     "tslint": "^5.18.0",
     "tslint-loader": "^3.5.4",
     "typescript": "^5.9.2",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.7"
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
   }
 }

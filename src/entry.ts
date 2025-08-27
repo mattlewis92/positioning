@@ -1,1 +1,1 @@
-export { Placement, PlacementArray, positionElements } from './positioning';
+export { Placement, PlacementArray, positionElements } from './positioning.js';
