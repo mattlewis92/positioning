@@ -6,6 +6,9 @@
   "typings": "dist/entry.d.ts",
   "module": "dist/entry.js",
   "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
     ".": {
       "main": "./dist/entry.js",
       "types": "./dist/entry.d.ts",
